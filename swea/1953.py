@@ -54,7 +54,10 @@ def get_spot_count(c, start_row, start_col, visited, depth):
             continue
 
         visited[start_row][start_col] = True    # 현재 노드 방문 체크
-        
+
+        # L이 1인 경우 -> 결과 값이 1
+        # depth 1 ~ L까지 확인해야 함.
+        # depth > L 이면 queue에 저장된 아이템은 continue하여 제거됨.
         if depth > L:
             continue
         

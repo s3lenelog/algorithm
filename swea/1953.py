@@ -98,7 +98,7 @@ def get_spot_count(c, start_row, start_col, visited, depth):
 T = int(input())
 
 for test_case in range(1, T + 1):
-    # 1. get ternel data ##################################
+    # 1. get ternel data 
     # N total_row, M total_col, R hole_row, C hole_col, L time
     # (R, C) -> entry point
     N, M, R, C, L = [int(data) for data in input().split()]

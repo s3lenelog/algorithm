@@ -44,9 +44,8 @@ bfs = []
 
 def get_spot_count(c, start_row, start_col, visited, depth):
     global ternel, up_matched, down_matched, left_matched, right_matched, bfs
-    # # 1. set visited
-    # visited[start_row][start_col] = True
-    # 1-2. root node push
+   
+    # 1. root node push
     bfs.append((start_row, start_col, 1))
 
     while len(bfs):

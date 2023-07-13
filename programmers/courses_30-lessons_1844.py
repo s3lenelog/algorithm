@@ -1,3 +1,6 @@
+# 코딩테스트 연습 > 깊이/너비 우선 탐색(DFS/BFS) > 게임 맵 최단거리
+# bfs : dfs로 풀이 시 모든 경로 탐색으로 시간 복잡도에서 불리.
+
 # 정확성 테스트 pass
 # 효율성 테스트 fail
 def dfs(root, maps, depth, visited, result):

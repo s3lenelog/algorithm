@@ -12,7 +12,7 @@ for test_case in range(1, T + 1):
     N, K = map(int, input().split())
     side = int(N / 4)
     _in = input()
-    numbers = [copy.deepcopy(_in[idx:idx+side]) for idx, x in enumerate(_in) if not idx % side]
+    numbers = [int(_in[idx:idx+side], 16) for idx, x in enumerate(_in) if not idx % side]
 
     # 회전 : side - 1 만큼 회전 후 저장
     # -> 이미 위에서 초기 상태 데이터는 저장했으니까
@@ -23,13 +23,11 @@ for test_case in range(1, T + 1):
         # numbers 저장 & 중복 제거
         for idx, x in enumerate(_in):
             if not idx % side:
-                numbers.append(copy.deepcopy(_in[idx:idx+side]))
+                numbers.append(int(_in[idx:idx+side], 16))
 
     # 중복제거 & 내림차순 정렬
     numbers = list(set(numbers))
     numbers.sort(reverse=True)
 
     # 이진수 -> 십진수 변환하여 출력
-    print(f'#{test_case} {int(numbers[K-1], 16)}')
-	  #print(f'#{test_case} {int(numbers[K-1], 16)}  : {time.time()-start:.4f} sec')
-  
+    print(f'#{test_case} {numbers[K-1]}')  

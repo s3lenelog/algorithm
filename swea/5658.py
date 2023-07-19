@@ -1,3 +1,5 @@
+# SWEA [모의 SW 역량테스트] 보물상자 비밀번호
+
 import copy
 import time
 #sys.stdin = open("input.txt", "r")

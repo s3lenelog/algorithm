@@ -30,10 +30,10 @@ def dfs(r, c, visited, types, dir):
             return
 
     # 원래 가던 방향 체크
-    if (r + row_dir[dir] < N and r + row_dir[dir] >= 0) \         # index range 체크
-        and (c + col_dir[dir] < N and c + col_dir[dir] >= 0) \    # index range 체크
-        and ((not visited[r + row_dir[dir]][c + col_dir[dir]] \                     # 다음 노드 방문 가능 여부 체크 1
-        and area[r + row_dir[dir]][c + col_dir[dir]] not in [t[2] for t in types]) \ # 다음 노드 방문 가능 여부 체크 2
+    if (r + row_dir[dir] < N and r + row_dir[dir] >= 0) \
+        and (c + col_dir[dir] < N and c + col_dir[dir] >= 0) \
+        and ((not visited[r + row_dir[dir]][c + col_dir[dir]] \
+        and area[r + row_dir[dir]][c + col_dir[dir]] not in [t[2] for t in types]) \
              or (types[0][0] == r + row_dir[dir] and types[0][1] == c + col_dir[dir])):  # 다음 노드 루트인지 체크
         dfs(r + row_dir[dir], c + col_dir[dir], visited, types, dir)
 
